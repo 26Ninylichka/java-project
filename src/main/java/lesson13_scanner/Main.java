@@ -28,10 +28,10 @@ public class Main {
             int array1= scanner.nextInt();
             switch (array1) {
                 case 1:// Порахувати суму елементів
-                    int[] array2 = new int[arrayLength];
+  
                     int sum = 0;
-                    for (int i = 0; i < array2.length; i++) {
-                        sum += array2[i];
+                    for (int i = 0; i < arr.length; i++) {
+                        sum += arr[i];
                     }
                     System.out.println("Сумма елементів : " + sum);
                     break;
