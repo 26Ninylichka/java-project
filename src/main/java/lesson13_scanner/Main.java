@@ -44,11 +44,11 @@ public class Main {
                     System.out.println("Середнє арифметичне всіх елементів: " + sum1);
                     break;
                 case 3://Знайти найбільший елемент
-                    int[] array4 = new int[arrayLength];
-                    int max = array4[0];
-                    for (int i = 1; i < array4.length; i++) {
-                        if (array4[i] > max) {
-                            max = array4[i];
+       
+                    int max = arr[0];
+                    for (int i = 1; i < arr.length; i++) {
+                        if (arr[i] > max) {
+                            max = arr[i];
                         }
                     }
                     System.out.println("Найбільший елемент: " + max);
