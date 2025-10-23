@@ -25,8 +25,8 @@ public class Main {
             System.out.println("Введіть цифру 4 шоб Завершити програму");
 
             System.out.println("Виберіть дію");
-            int array1= scanner.nextInt();
-            switch (array1) {
+            int action = scanner.nextInt();
+            switch (action) {
                 case 1:// Порахувати суму елементів
   
                     int sum = 0;
