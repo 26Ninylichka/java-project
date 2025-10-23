@@ -1,0 +1,67 @@
+package lesson13_scanner;
+
+import java.util.Scanner;
+
+public class Main {
+    static void main() {
+        Scanner scanner = new Scanner(System.in);
+        //Зчитати з клавіатури розмір масиву n. (n x m - для сміливих)
+
+        System.out.println("Введіть розмір майбутнього масиву: ");
+        int arrayLength = scanner.nextInt();
+        //Створити масив цілих чисел і заповнити його даними користувача.
+        int[] arr = new int[arrayLength];
+
+        System.out.println("Введіть усі елементи масиву по черзі.Натискайте ");
+        for (int i = 0; i < arrayLength; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        while (true) {
+            //Вивести текстове меню
+            System.out.println("Меню: Введіть цифру ");
+            System.out.println("Введіть цифру 1 щоб Порахувати суму елементів");
+            System.out.println("Введіть цифру 2 щоб Знайти середнє арифметичне всіх елементів");
+            System.out.println("Введіть цифру 3 шоб Знайти найбільший елемент");
+            System.out.println("Введіть цифру 4 шоб Завершити програму");
+
+            System.out.println("Виберіть дію");
+            int action = scanner.nextInt();
+            switch (action) {
+                case 1:// Порахувати суму елементів
+  
+                    int sum = 0;
+                    for (int i = 0; i < arr.length; i++) {
+                        sum += arr[i];
+                    }
+                    System.out.println("Сумма елементів : " + sum);
+                    break;
+                case 2:// Знайти середнє арифметичне всіх елементів
+  
+                    int sum1 = 0;
+                    for (int number : arr) {
+                        sum1 += number;
+                    }
+                    System.out.println("Середнє арифметичне всіх елементів: " + sum1 / arr.length);
+                    break;
+                case 3://Знайти найбільший елемент
+       
+                    int max = arr[0];
+                    for (int i = 1; i < arr.length; i++) {
+                        if (arr[i] > max) {
+                            max = arr[i];
+                        }
+                    }
+                    System.out.println("Найбільший елемент: " + max);
+                    break;
+                case 4://Завершити програму
+
+                    System.out.println("Программа завершена.");
+                    scanner.close();
+                    return;
+            }
+        }
+
+
+    }
+
+}
