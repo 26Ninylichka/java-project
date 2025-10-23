@@ -36,12 +36,12 @@ public class Main {
                     System.out.println("Сумма елементів : " + sum);
                     break;
                 case 2:// Знайти середнє арифметичне всіх елементів
-                    int[] array3 = new int[arrayLength];
+  
                     int sum1 = 0;
-                    for (int number : array3) {
+                    for (int number : arr) {
                         sum1 += number;
                     }
-                    System.out.println("Середнє арифметичне всіх елементів: " + sum1);
+                    System.out.println("Середнє арифметичне всіх елементів: " + sum1 / arr.length);
                     break;
                 case 3://Знайти найбільший елемент
        
