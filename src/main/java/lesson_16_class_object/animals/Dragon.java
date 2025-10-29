@@ -45,4 +45,16 @@ public class Dragon {
     public double getWeight() {
         return this.weight;
     }
+    public void voice() {
+        System.out.println("Тепер я тебе можу з'їсти 🔥");
+    }
+
+    @Override
+    public String toString() {
+        return "Dragon{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                '}';
+    }
 }

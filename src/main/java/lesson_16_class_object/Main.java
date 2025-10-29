@@ -48,6 +48,9 @@ public class Main {
         }
         System.out.println("Ви створили всіх необхідних Драконів");
 
+        mammy.voice();
+
+        System.out.println(mammy.toString());
 
     }
 }
