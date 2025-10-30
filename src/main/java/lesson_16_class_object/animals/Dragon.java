@@ -1,10 +1,13 @@
 package lesson_16_class_object.animals;
 
+import lesson_16_class_object.Breed;
+
 public class Dragon {
 
     private String name;
     private int age;
     private double weight;
+    private Breed breed;
 
 
     public Dragon() {
@@ -13,13 +16,14 @@ public class Dragon {
         System.out.println("Створено невідомого Дракона");
     }
 
-    public Dragon(String name, int age, double weight) {
+    public Dragon(String name, int age, double weight, Breed breed) {
         System.out.println("Викликано конструктор з параметрами");
         System.out.println("Створено повноцінного Дракона");
 
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.breed = breed;
     }
 
     public void setName(String name) {
@@ -45,6 +49,12 @@ public class Dragon {
     public double getWeight() {
         return this.weight;
     }
+    public Breed getBreed() {
+       return this.breed;
+    }
+    public void  setBreed(Breed breed) {
+       this.breed = breed;
+    }
     public void voice() {
         System.out.println("Тепер я тебе можу з'їсти 🔥");
     }
@@ -55,6 +65,7 @@ public class Dragon {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
+                "breed=" + breed +
                 '}';
     }
 }

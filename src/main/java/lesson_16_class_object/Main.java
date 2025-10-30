@@ -11,13 +11,15 @@ public class Main {
         dragon1.setName("Ferry");
         dragon1.setAge(5);
         dragon1.setWeight(400.0);
+        dragon1.setBreed(Breed.WERMAKS);
 
 
         System.out.println("Дракона звати: " + dragon1.getName());
         System.out.println("Вік Дракона: " + dragon1.getAge());
         System.out.println("Вага Дракона: " + dragon1.getWeight());
+        System.out.println("Порода Дракона: " + dragon1.getBreed());
 
-        Dragon mammy = new Dragon("Mammy", 25, 1000);
+        Dragon mammy = new Dragon("Mammy", 25, 1000, Breed.ARRAKS);
 
         System.out.println("Дракона звати: " + mammy.getName());
         System.out.println("Вік Дракона: " + mammy.getAge());
