@@ -24,16 +24,17 @@ class CarTest {
 
 
     @Test
-    void shouldIsAllowedToDriveReleaseDataIsInFuture() {
+    void shouldIsAllowedToDriveWhenTuvIsOk() {
         //given
-        Car audiQ8Future = new Car(60, 6, LocalDate.of(2026, 11, 4));
+        Car audiQ7 = new Car(60, 6, LocalDate.of(2025, 11, 4));
 
-        // when
-        boolean result = audiQ8Future.isAllowedToDrive();
+        //when
+        boolean result = audiQ7.isAllowedToDrive();
 
-        // then
+        //then
         Assertions.assertTrue(result);
     }
+
 
     @Test
     void shouldCalculateMaxDistanceCorrectly() {
