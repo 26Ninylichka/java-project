@@ -5,13 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class CarTest {
 
 
     @Test
-    void shouldCanDrive() {
+    void shouldBeAbleToCanDrive() {
         // given
         Car audiQ8 = new Car(60, 6, LocalDate.of(2026, 10, 2));
 
@@ -24,7 +22,7 @@ class CarTest {
 
 
     @Test
-    void shouldIsAllowedToDriveWhenTuvIsOk() {
+    void shouldBeIsAllowedToDriveWhenTuvIsOk() {
         //given
         Car audiQ7 = new Car(60, 6, LocalDate.of(2025, 11, 4));
 
