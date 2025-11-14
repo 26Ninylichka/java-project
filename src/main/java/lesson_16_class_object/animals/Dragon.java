@@ -2,6 +2,8 @@ package lesson_16_class_object.animals;
 
 import lesson_16_class_object.Breed;
 
+import java.util.Objects;
+
 public class Dragon {
 
     private String name;
@@ -49,12 +51,15 @@ public class Dragon {
     public double getWeight() {
         return this.weight;
     }
+
     public Breed getBreed() {
-       return this.breed;
+        return this.breed;
     }
-    public void  setBreed(Breed breed) {
-       this.breed = breed;
+
+    public void setBreed(Breed breed) {
+        this.breed = breed;
     }
+
     public void voice() {
         System.out.println("Тепер я тебе можу з'їсти 🔥");
     }
@@ -67,5 +72,34 @@ public class Dragon {
                 ", weight=" + weight +
                 "breed=" + breed +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+
+        if (!(obj instanceof Dragon)) {
+            return false;
+        }
+
+        Dragon otherDragon = (Dragon) obj;
+
+
+        return this.name.equals(otherDragon.name)
+                && this.age == otherDragon.age
+                && this.weight == otherDragon.weight
+                && this.breed == otherDragon.breed;
+
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, weight, breed);
     }
 }

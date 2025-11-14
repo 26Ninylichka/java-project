@@ -54,5 +54,7 @@ public class Main {
 
         System.out.println(mammy.toString());
 
+        System.out.println(mammy.equals(dragon1));
+
     }
 }
