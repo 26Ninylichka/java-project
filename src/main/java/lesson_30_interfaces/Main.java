@@ -9,10 +9,8 @@ public class Main {
         stack.addElementToStack(20);
         stack.addElementToStack(30);
         stack.addElementToStack(40);
-        stack.addElementToStack(50);
         System.out.println("Верхній елемент " + stack.readTop());
 
-        stack.deleteElementFromStack();
         stack.deleteElementFromStack();
         stack.deleteElementFromStack();
         stack.deleteElementFromStack();

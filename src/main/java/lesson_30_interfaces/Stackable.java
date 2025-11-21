@@ -1,5 +1,7 @@
 package lesson_30_interfaces;
 
+import java.util.Optional;
+
 public interface Stackable {
 
     boolean isEmpty();
@@ -12,5 +14,6 @@ public interface Stackable {
 
     int readTop() throws StackIsEmptyException;
 
+    Optional<Integer> reedTop();
 
 }

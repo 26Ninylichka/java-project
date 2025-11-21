@@ -1,5 +1,7 @@
 package lesson_30_interfaces;
 
+import java.util.Optional;
+
 public class Stack implements Stackable {
     private int maxSize;
     private int[] stack;
@@ -24,10 +26,9 @@ public class Stack implements Stackable {
     }
 
     @Override
-    public void addElementToStack(int element) {
+    public void addElementToStack(int element) throws StackIsFullException {
         if (isFull()) {
-            System.out.println("Стек заповнений! Неможливо додати елемент");
-            return;
+            throw new StackIsEmptyException("Помилка: стек повний");
         }
         stack[++top] = element;
         System.out.println("Елемент " + element + " Додано у стек");
@@ -35,10 +36,9 @@ public class Stack implements Stackable {
     }
 
     @Override
-    public int deleteElementFromStack() {
+    public int deleteElementFromStack() throws StackIsEmptyException {
         if (isEmpty()) {
-            System.out.println("Стек порожній. Нема що видаляти");
-            return -1;
+            throw new StackIsFullException("Помилка: стек пустий");
         }
         int deleted = stack[top--];
         System.out.println("Елемент: " + deleted + " Видалено із стека ");
@@ -47,10 +47,15 @@ public class Stack implements Stackable {
 
 
     @Override
-    public int readTop() {
+    public Optional<Integer> reedTop() {
+        return Optional.empty();
+    }
+
+    @Override
+    public int readTop() throws  StackIsEmptyException {
         if (isEmpty()) {
-            System.out.println("Стек порожній. Немає верхнього елемента");
-            return -1;
+            throw new StackIsFullException("Помилка: стек пустий");
+
         }
         return stack[top];
     }

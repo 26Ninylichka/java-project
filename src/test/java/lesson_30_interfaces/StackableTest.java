@@ -11,7 +11,16 @@ class StackableTest {
      // when
      boolean isEmpty = stack.isEmpty();
      // then
-     Assertions.assertEquals(5, 5, "Стек пустий!");
+     Assertions.assertTrue(isEmpty);
  }
 
+
+ @Test
+    void shouldDoWhenStackIsFull() {
+     //given
+     Stackable stack = new Stack();
+     // when + then
+     Assertions.assertThrows(StackIsEmptyException.class,
+             () -> stack.readTop());
+ }
 }
