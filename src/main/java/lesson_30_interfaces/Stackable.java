@@ -14,6 +14,6 @@ public interface Stackable {
 
     int readTop() throws StackIsEmptyException;
 
-    Optional<Integer> reedTop();
+    Optional<Integer> readTopOptional();
 
 }

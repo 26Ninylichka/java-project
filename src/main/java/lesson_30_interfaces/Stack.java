@@ -38,7 +38,7 @@ public class Stack implements Stackable {
     @Override
     public int deleteElementFromStack() throws StackIsEmptyException {
         if (isEmpty()) {
-            throw new StackIsFullException("Помилка: стек пустий");
+            throw new StackIsEmptyException("Помилка: стек пустий");
         }
         int deleted = stack[top--];
         System.out.println("Елемент: " + deleted + " Видалено із стека ");
@@ -47,14 +47,14 @@ public class Stack implements Stackable {
 
 
     @Override
-    public Optional<Integer> reedTop() {
+    public Optional<Integer> readTopOptional() {
         return Optional.empty();
     }
 
     @Override
     public int readTop() throws  StackIsEmptyException {
         if (isEmpty()) {
-            throw new StackIsFullException("Помилка: стек пустий");
+            throw new StackIsEmptyException("Помилка: стек пустий");
 
         }
         return stack[top];
