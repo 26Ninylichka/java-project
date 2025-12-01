@@ -28,7 +28,7 @@ public class Stack implements Stackable {
     @Override
     public void addElementToStack(int element) throws StackIsFullException {
         if (isFull()) {
-            throw new StackIsEmptyException("Помилка: стек повний");
+            throw new StackIsFullException("Помилка: стек повний");
         }
         stack[++top] = element;
         System.out.println("Елемент " + element + " Додано у стек");
@@ -48,7 +48,10 @@ public class Stack implements Stackable {
 
     @Override
     public Optional<Integer> readTopOptional() {
-        return Optional.empty();
+        if (isEmpty()) {
+            return Optional.empty();
+        }
+        return Optional.of(stack[top]);
     }
 
     @Override
