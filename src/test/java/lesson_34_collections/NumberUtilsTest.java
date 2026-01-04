@@ -15,7 +15,7 @@ class NumberUtilsTest {
         // given
         List<Integer> numbers = new ArrayList<>();
         // when
-        int result = NumberUtils.getSum(numbers);
+        long result = NumberUtils.getSum(numbers);
 
         // then
         assertEquals(0, result);
@@ -30,7 +30,7 @@ class NumberUtilsTest {
         numbers1.add(-2);
 
         // when
-        int result = NumberUtils.getSum(numbers1);
+        long result = NumberUtils.getSum(numbers1);
 
         // then
         assertEquals(-3, result);

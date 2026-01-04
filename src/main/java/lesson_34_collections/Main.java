@@ -3,8 +3,6 @@ package lesson_34_collections;
 import java.util.ArrayList;
 import java.util.List;
 
-import static lesson_34_collections.NumberUtils.multiplyOddNumber;
-
 public class Main {
     static void main() {
 
@@ -15,7 +13,7 @@ public class Main {
         numbers.add(30);
 
 
-        int sum = NumberUtils.getSum(numbers);
+        long sum = NumberUtils.getSum(numbers);
 
 
         System.out.println(sum);
@@ -25,7 +23,7 @@ public class Main {
         numbers1.add(2);
         numbers1.add(3);
 
-        List<Integer> result = multiplyOddNumber(numbers1);
+        List<Integer> result = NumberUtils.multiplyOddNumber(numbers1);
         System.out.println(result);
 
 

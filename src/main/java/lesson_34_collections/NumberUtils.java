@@ -8,8 +8,8 @@ public class NumberUtils {
     //  getSum(List numbers) - Порахувати суму чисел
     // for(на стероідах)number:numbers
 
-    public static int getSum(List<Integer> numbers) {
-        int sum = 0;
+    public static long getSum(List<Integer> numbers) {
+        long sum = 0;
 
         for (int number : numbers) {
             sum = sum + number;
