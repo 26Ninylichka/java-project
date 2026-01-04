@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NumberUtils1Test {
 
     @Test
-    void shouldWhenFirstOrdered() {
+    void shouldReturnCorrectResultWhenFirstOrderedIsCalled() {
         // given
         List<Integer> myList = new ArrayList<>();
         myList.add(1);
@@ -29,7 +29,7 @@ class NumberUtils1Test {
     }
 
     @Test
-    void shouldWhenMergeMaps() {
+    void shouldCorrectlyMergeMapsWhenMergeMapsIsCalled() {
         // given
         Map<String, Integer> map1 = new HashMap<>();
         map1.put("a", 5);
