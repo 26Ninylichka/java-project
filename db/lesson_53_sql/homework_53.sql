@@ -1,13 +1,13 @@
 CREATE TABLE Students
 (
-    first_name TEXT,
-    last_name  TEXT,
-    faculty    TEXT
+    first_name TEXT NOT NULL,
+    last_name  TEXT NOT NULL,
+    faculty    TEXT NOT NULL
 );
 
 
 INSERT INTO Students(first_name, last_name, faculty, year)
-VALUES ('Nina', 'Voronetska', 'Java', 27),
+VALUES ('Nina', 'V oronetska', 'Java', 27),
        ('Al', 'Kab', 'Java', 28),
        ('Eugen', 'Holodiuc', 'Java', 29),
        ('Anton', 'Lappa', 'Java', 30),
@@ -29,7 +29,7 @@ WHERE first_name = 'Nina'
 ;
 
 ALTER TABLE Students
-    ADD COLUMN year INT;
+    ADD COLUMN year INT NOT NULL;
 
 
 ALTER TABLE Students
